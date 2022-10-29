@@ -3,24 +3,24 @@ import 'package:app/common_widgets/text_field/text_field_widget.dart';
 import 'package:app/constants.dart';
 import 'package:app/routes/routes.gr.dart';
 import 'package:app/services/auth_services.dart';
-import 'package:app/services/item_list_services.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
-class LoginView extends StatefulWidget {
-  const LoginView({Key? key}) : super(key: key);
+
+import 'package:flutter/material.dart';import 'package:fluttertoast/fluttertoast.dart';
+
+class SignUpView extends StatefulWidget {
+  const SignUpView({Key? key}) : super(key: key);
 
   @override
-  _LoginViewState createState() => _LoginViewState();
+  _SignUpViewState createState() => _SignUpViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
-
+class _SignUpViewState extends State<SignUpView> {
+  late String name;
   late String email;
   late String password;
   final _formKey = GlobalKey<FormState>(); //For form
-
+  
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -38,10 +38,10 @@ class _LoginViewState extends State<LoginView> {
                   children: [
                     InkWell(
                       onTap: (){
-                        context.router.push(SignUpRoute());
+                        context.router.push(LoginRoute());
                       },
                       child: Text(
-                        'Sign Up',
+                        'Login',
                         style: TextStyle(
                           color: AppConstants().linkColor,
                           fontSize: 22.0,
@@ -55,11 +55,11 @@ class _LoginViewState extends State<LoginView> {
                 Padding(
                   padding: const EdgeInsets.only(top: 55),
                   child: Text(
-                    'Login',
+                    'Create Account',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 30.0,
-                        color: Colors.black
+                        color: Colors.white
                     ),
                   ),
                 ),
@@ -68,13 +68,13 @@ class _LoginViewState extends State<LoginView> {
                   child: Column(
                     children: [
                       textField(
-                          label: 'Email',
+                          label: 'Name',
                           onChanged: (String val){
-                            email = val;
+                            name = val;
                           },
                           initialValue: '',
                           validator: (String? val){},
-                          hintText: 'Enter email',
+                          hintText: 'Enter name',
                           context: context
                       ),
                       textField(
@@ -87,16 +87,34 @@ class _LoginViewState extends State<LoginView> {
                           hintText: 'Enter password',
                           context: context
                       ),
+                      textField(
+                          initialValue: '',
+                          onChanged: (String val){
+                            email = val;
+                          },
+                          validator: (String? val){},
+                          label: 'Email',
+                          hintText: 'Enter email',
+                          context: context
+                      ),
                       roundButton(
                           width: width,
                           onPressed: (){
                             if (_formKey.currentState!.validate()) {
-                              AuthenticationServices().login(email, password).then((val){
-                                if (val.data['status'] == 'OK') {
-                                  context.router.push(ItemListRoute());
+                              AuthenticationServices().register(email, password, name).then((val){
+                                if (val.data['message'] == 'user registered sucessfully') {
+                                  Fluttertoast.showToast(
+                                    msg: '${val.data['Result']['name']} is successfully Registered',
+                                    toastLength: Toast.LENGTH_SHORT,
+                                    gravity: ToastGravity.BOTTOM,
+                                    backgroundColor: Colors.red[900],
+                                    textColor: Colors.white,
+                                    fontSize: 16.0,
+                                  );
+                                  context.router.push(LoginRoute());
                                 }else{
                                   Fluttertoast.showToast(
-                                    msg: val.data['error'],
+                                    msg: 'Error Registering',
                                     toastLength: Toast.LENGTH_SHORT,
                                     gravity: ToastGravity.BOTTOM,
                                     backgroundColor: Colors.red[900],
@@ -107,20 +125,18 @@ class _LoginViewState extends State<LoginView> {
                               });
                             }
                           },
-                          title: 'Login',
+                          title: 'Register',
                           topMargin: 30.0
                       ),
                     ],
                   ),
                 ),
                 // textField(
-                //     label: 'User Name',
-                //     onChanged: (String val){
-                //
-                //     },
+                //     label: 'Name',
+                //     onChanged: (String val){},
                 //     initialValue: '',
                 //     validator: (String? val){},
-                //     hintText: 'Enter username',
+                //     hintText: 'Enter name',
                 //     context: context
                 // ),
                 // textField(
@@ -131,12 +147,18 @@ class _LoginViewState extends State<LoginView> {
                 //     hintText: 'Enter password',
                 //     context: context
                 // ),
+                // textField(
+                //     initialValue: '',
+                //     onChanged: (String val){},
+                //     validator: (String? val){},
+                //     label: 'Email',
+                //     hintText: 'Enter email',
+                //     context: context
+                // ),
                 // roundButton(
                 //     width: width,
-                //     onPressed: (){
-                //       //context.router.push(AdminTabControllerRoute());
-                //     },
-                //     title: 'Login',
+                //     onPressed: (){},
+                //     title: 'Register',
                 //     topMargin: 30.0
                 // ),
               ],
