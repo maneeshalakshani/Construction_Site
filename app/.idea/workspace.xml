@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38aac047-80c0-4134-a2fa-748d8e43934b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/common_widgets/buttons/round_button.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/common_widgets/text_field/text_field_widget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/common_widgets/text_field/text_state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constants.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/login/login_view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/register/register.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/routes/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/item_list/item_list_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/services/auth_services.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/services/item_list_services.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/login/login_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/register/register.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/register/register_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/routes.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -81,6 +72,14 @@
       <option name="presentableId" value="Default" />
       <updated>1667060897570</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: Mobile App's Login/ SignUp UI">
+      <created>1667063116388</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667063116388</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -88,5 +87,9 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Mobile App's Login/ SignUp UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Mobile App's Login/ SignUp UI" />
   </component>
 </project>
