@@ -1,3 +1,4 @@
+import 'package:app/bottom_nav.dart';
 import 'package:app/pages/item_list/item_list_view.dart';
 import 'package:app/pages/login/login_view.dart';
 import 'package:app/pages/register/register_view.dart';
@@ -11,10 +12,9 @@ import 'package:auto_route/auto_route.dart';
   replaceInRouteName: 'View,Route',
   routes: [
     MaterialRoute(page: LoginView, initial: true),
-    // MaterialRoute(page: AuthSelectView, path: '/authSelect'),
     MaterialRoute(page: ItemListView, path: '/item_list'),
     MaterialRoute(page: SignUpView, path: '/signUp'),
-    // MaterialRoute(page: AdminHomeView, path: '/admin_home'),
+    MaterialRoute(page: BottomNavView, path: '/nav'),
     // MaterialRoute(page: AdminTabControllerView, path: '/admin_tab_controller'),
 
   ],

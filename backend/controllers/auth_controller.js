@@ -13,7 +13,7 @@ exports.register = async (req, res) => {
             return res.send({error: "User exist"});
         }
         const user = await userObj.save();
-        res.status(200).json(user);
+        res.status(200).json({message: 'user registered sucessfully', Result: user});
     }catch(err){
         res.status(500).json(err);
     }
@@ -29,9 +29,9 @@ exports.adminRegister = async (req, res) => {
             return res.send({error: "User exist"});
         }
         const user = await userObj.save();
-        res.status(200).json(user);
+        res.status(200).json({message: 'user registered sucessfully', Result: user});
     }catch(err){
-        res.status(500).json(err);
+        res.json({status: "error", error: err})
     }
 }
 
@@ -46,7 +46,11 @@ exports.login = async (req, res) => {
         if(password == user.password){
             const token = jwt.sign({email: user.email}, JWT_SECRET);
             if(res.status(201)){
-                return res.json({status: "OK", data: token});
+                //return res.json({status: "OK", data: token});
+                return res.json({
+                    status: 'OK',
+                    token: token,
+                  });
             }else{
                 return res.json({error: "error"});
             }

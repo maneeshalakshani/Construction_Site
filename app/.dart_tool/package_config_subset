@@ -94,6 +94,10 @@ dart_style
 2.17
 file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/dart_style-2.2.4/
 file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/dart_style-2.2.4/lib/
+dio
+2.12
+file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/dio-4.0.6/
+file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/dio-4.0.6/lib/
 fake_async
 2.12
 file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.3.1/
@@ -114,6 +118,10 @@ flutter_mobx
 2.13
 file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_mobx-2.0.6+4/
 file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_mobx-2.0.6+4/lib/
+fluttertoast
+2.12
+file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.1/
+file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.1/lib/
 frontend_server_client
 2.12
 file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/frontend_server_client-3.1.0/
@@ -140,8 +148,8 @@ file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/io-1.0.3/
 file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/io-1.0.3/lib/
 js
 2.16
-file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.5/
-file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.5/lib/
+file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.4/
+file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.4/lib/
 json_annotation
 2.17
 file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/json_annotation-4.7.0/
@@ -282,6 +290,10 @@ flutter_test
 2.17
 file:///D:/Applications/flutter/packages/flutter_test/
 file:///D:/Applications/flutter/packages/flutter_test/lib/
+flutter_web_plugins
+2.17
+file:///D:/Applications/flutter/packages/flutter_web_plugins/
+file:///D:/Applications/flutter/packages/flutter_web_plugins/lib/
 app
 2.18
 file:///D:/Study%20Materials/Project%20SLIIT/Y3S2/CSSE/Construction_Site/app/

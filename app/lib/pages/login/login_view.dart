@@ -93,7 +93,7 @@ class _LoginViewState extends State<LoginView> {
                             if (_formKey.currentState!.validate()) {
                               AuthenticationServices().login(email, password).then((val){
                                 if (val.data['status'] == 'OK') {
-                                  context.router.push(ItemListRoute());
+                                  context.router.push(BottomNavRoute());
                                 }else{
                                   Fluttertoast.showToast(
                                     msg: val.data['error'],
