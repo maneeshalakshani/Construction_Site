@@ -73,8 +73,8 @@ class _PendingOrderCardState extends State<PendingOrderCard> {
                     fontSize: 20.0, color: AppConstants().cardDataColor),
               ),
               Text(
-                (widget.orders[widget.index]['reasong'] != null)
-                    ? 'Reason : ${widget.orders[widget.index]['totPrice']}'
+                (widget.orders[widget.index]['reason'] != null)
+                    ? 'Reason : ${widget.orders[widget.index]['reason']}'
                     : 'Reason : Reason is still pending',
                 textAlign: TextAlign.start,
                 style: TextStyle(

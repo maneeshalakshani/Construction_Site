@@ -4,6 +4,7 @@ import 'package:app/pages/accepted_orders/accepted_orders_view.dart';
 import 'package:app/pages/item_list/item_list_view.dart';
 import 'package:app/pages/order/order_view.dart';
 import 'package:app/pages/pending_orders/pending_orders_view.dart';
+import 'package:app/pages/rejected_orders.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages/login/login_view.dart';
 import 'package:app/pages/register/register_view.dart';
@@ -30,12 +31,6 @@ class _BottomNavViewState extends State<BottomNavView> {
   int selectedIndex = 0;
   late List<Widget> bodyWidgets;
 
-  // List<Nav> pages = [
-  //   Nav(key: 0, pages: [ItemListView(), OrderView()]),
-  //   Nav(key: 1, pages: [LoginView()]),
-  //   Nav(key: 2, pages: [SignUpView()]),
-  // ];
-
   @override
   Widget build(BuildContext context) {
     bodyWidgets = [
@@ -44,14 +39,14 @@ class _BottomNavViewState extends State<BottomNavView> {
       ),
       PendingOrdersView(),
       AcceptedOrdersView(),
-      PendingOrdersView(),
-      SignUpView()
+      RejectedOrdersView(),
+      // SignUpView()
     ];
 
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Items Available',
+          'Site Manager',
         ),
         backgroundColor: AppConstants().navColor,
       ),
@@ -88,10 +83,10 @@ class _BottomNavViewState extends State<BottomNavView> {
             icon: Icon(Icons.shopping_cart_sharp),
             label: 'rejected',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Profile',
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.account_circle),
+          //   label: 'Profile',
+          // ),
         ],
       ),
     );
