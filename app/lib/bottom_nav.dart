@@ -1,7 +1,10 @@
 import 'package:app/common_data.dart';
 import 'package:app/constants.dart';
+import 'package:app/pages/accepted_orders/accepted_orders_view.dart';
 import 'package:app/pages/item_list/item_list_view.dart';
 import 'package:app/pages/order/order_view.dart';
+import 'package:app/pages/pending_orders/pending_orders_view.dart';
+import 'package:app/pages/rejected_orders.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages/login/login_view.dart';
 import 'package:app/pages/register/register_view.dart';
@@ -28,26 +31,22 @@ class _BottomNavViewState extends State<BottomNavView> {
   int selectedIndex = 0;
   late List<Widget> bodyWidgets;
 
-  // List<Nav> pages = [
-  //   Nav(key: 0, pages: [ItemListView(), OrderView()]),
-  //   Nav(key: 1, pages: [LoginView()]),
-  //   Nav(key: 2, pages: [SignUpView()]),
-  // ];
-
   @override
   Widget build(BuildContext context) {
     bodyWidgets = [
       ItemListView(
         appCommonData: appCommonData,
       ),
-      LoginView(),
-      SignUpView()
+      PendingOrdersView(),
+      AcceptedOrdersView(),
+      RejectedOrdersView(),
+      // SignUpView()
     ];
 
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Items Available',
+          'Site Manager',
         ),
         backgroundColor: AppConstants().navColor,
       ),
@@ -57,7 +56,7 @@ class _BottomNavViewState extends State<BottomNavView> {
         selectedItemColor: AppConstants().backgroundColor,
         unselectedItemColor: Color(0xffffffff),
         backgroundColor: AppConstants().navColor,
-        iconSize: 35,
+        iconSize: 30,
         elevation: 5,
         currentIndex: selectedIndex,
         onTap: (index) {
@@ -73,13 +72,21 @@ class _BottomNavViewState extends State<BottomNavView> {
             label: 'home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Profile',
+            icon: Icon(Icons.shopping_cart_sharp),
+            label: 'pending',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.info),
-            label: 'Info',
+            icon: Icon(Icons.shopping_cart_sharp),
+            label: 'accepted',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart_sharp),
+            label: 'rejected',
+          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.account_circle),
+          //   label: 'Profile',
+          // ),
         ],
       ),
     );
