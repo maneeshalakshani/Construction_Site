@@ -19,4 +19,12 @@ class OrderServices {
       print(e);
     }
   }
+
+  getPendingOrders() async {
+    try {
+      return await dio.get('$apiUrl/getAllPendingOrders');
+    } on DioError catch (e) {
+      print(e);
+    }
+  }
 }

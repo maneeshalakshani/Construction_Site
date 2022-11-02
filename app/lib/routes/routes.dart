@@ -2,12 +2,12 @@ import 'package:app/bottom_nav.dart';
 import 'package:app/pages/item_list/item_list_view.dart';
 import 'package:app/pages/login/login_view.dart';
 import 'package:app/pages/order/order_view.dart';
+import 'package:app/pages/pending_orders/pending_orders_view.dart';
 import 'package:app/pages/register/register_view.dart';
 import 'package:auto_route/auto_route.dart';
 
 /// Need to run the following command
 ///    flutter packages pub run build_runner watch
-
 
 @MaterialAutoRouter(
   replaceInRouteName: 'View,Route',
@@ -17,6 +17,7 @@ import 'package:auto_route/auto_route.dart';
     MaterialRoute(page: SignUpView, path: '/signUp'),
     MaterialRoute(page: BottomNavView, path: '/nav'),
     MaterialRoute(page: OrderView, path: '/order'),
+    MaterialRoute(page: PendingOrdersView, path: '/pending_orders'),
   ],
 )
 class $AppRouter {}
