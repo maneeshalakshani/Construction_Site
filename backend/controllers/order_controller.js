@@ -1,12 +1,12 @@
 const Order = require('../models/order')
 
 exports.add = async (req, res) => {
-    const {quantity, userID, itemID, totPrice} = req.body;
+    const {quantity, userID, itemID, totPrice, deliveryAddress} = req.body;
     const orderStatus = 'Pending';
     try{
-        const order = new Order({userID, itemID, quantity, totPrice, orderStatus})
+        const order = new Order({userID, itemID, quantity, totPrice, orderStatus, deliveryAddress})
         const returnOrder = await order.save()
-        res.status(200).json(returnOrder)
+        res.status(200).json({message: 'Order Added', Result: returnOrder})
     }catch(err){
         res.status(500).json(err)
     }
@@ -22,7 +22,8 @@ exports.update = async (req, res) => {
             "itemID": orderToUpdate.itemID,
             "quantity": orderToUpdate.quantity,
             "totPrice": orderToUpdate.totPrice,
-            "orderStatus": orderStatus
+            "orderStatus": orderStatus,
+            "deliveryAddress": orderToUpdate.deliveryAddress
         }
 
         await Order.findByIdAndUpdate(id, orderObj);

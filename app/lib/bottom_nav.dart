@@ -1,23 +1,42 @@
+import 'package:app/common_data.dart';
 import 'package:app/constants.dart';
 import 'package:app/pages/item_list/item_list_view.dart';
+import 'package:app/pages/order/order_view.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages/login/login_view.dart';
 import 'package:app/pages/register/register_view.dart';
 
+// class Nav{
+//   late int key;
+//   late List<Widget> pages;
+//
+//   Nav({required this.key, required this.pages});
+// }
+
 class BottomNavView extends StatefulWidget {
-  const BottomNavView({Key? key}) : super(key: key);
+  BottomNavView({Key? key, required this.appCommonData}) : super(key: key);
+  AppCommonData appCommonData;
 
   @override
-  _BottomNavViewState createState() => _BottomNavViewState();
+  _BottomNavViewState createState() => _BottomNavViewState(this.appCommonData);
 }
 
 class _BottomNavViewState extends State<BottomNavView> {
+  AppCommonData appCommonData;
+  _BottomNavViewState(this.appCommonData);
+
   int selectedIndex = 0;
-  static const List<Widget> bodyWidgets = [
+  List<Widget> bodyWidgets = [
     ItemListView(),
     LoginView(),
     SignUpView()
   ];
+
+  // List<Nav> pages = [
+  //   Nav(key: 0, pages: [ItemListView(), OrderView()]),
+  //   Nav(key: 1, pages: [LoginView()]),
+  //   Nav(key: 2, pages: [SignUpView()]),
+  // ];
 
   @override
   Widget build(BuildContext context) {

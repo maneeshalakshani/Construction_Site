@@ -72,7 +72,20 @@ exports.getUserData = async (req, res) => {
             res.send({status: "error", data: error})
         })
     }catch(err){
+        res.status(500).json(err);
+    }
+}
 
+exports.getUserDataFromEmail = async (req, res) => {
+    const{email} = req.body;
+    try{
+        await User.findOne({email: email}).then((data) => {
+            res.send({status: "Ok", data: data})
+        }).catch((error) => {
+            res.send({status: "error", data: error})
+        })
+    }catch(err){
+        res.status(500).json(err);
     }
 }
 

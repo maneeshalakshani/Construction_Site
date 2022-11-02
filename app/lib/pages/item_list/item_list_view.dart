@@ -1,3 +1,5 @@
+import 'package:app/common_data.dart';
+import 'package:app/common_widgets/null_error.dart';
 import 'package:app/constants.dart';
 import 'package:app/pages/item_list/list_card.dart';
 import 'package:app/services/item_list_services.dart';
@@ -14,7 +16,7 @@ class _ItemListViewState extends State<ItemListView> {
   var items;
   var itemLength;
 
-  void getListData(){
+  void getListData() {
     ItemListServices().getAllItems().then((val) async {
       setState(() {
         items = val.data['Result'];
@@ -33,19 +35,15 @@ class _ItemListViewState extends State<ItemListView> {
   Widget build(BuildContext context) {
     getListData();
 
-    if(itemLength == 0 ||itemLength == null){
-      return const Center(
-        child: Text(
-          'Loading...'
-        ),
-      );
-    }else{
+    if (itemLength == 0 || itemLength == null) {
+      return NullError();
+    } else {
       return SafeArea(
         child: Scaffold(
           backgroundColor: AppConstants().insideBackgroundColor,
           body: ListView.builder(
             itemCount: 3,
-            itemBuilder: (BuildContext context, int index){
+            itemBuilder: (BuildContext context, int index) {
               return ListCard(items: items, index: index);
             },
           ),

@@ -8,15 +8,19 @@ Widget textField({
   required String label,
   required String hintText,
   required BuildContext context,
+  Color? fillColor,
+  Color? labelColor,
+  double? paddingTop,
+  TextInputType? textInputType,
 }){
-  double paddingTop = 10;
+  double defaultPaddingTop = 10;
   double paddingBottom = 30;
-  Color fillColor = Colors.white;
-  Color labelColor = Colors.white;
+  Color defaultFillColor = Colors.white;
+  Color defaultLabelColor = Colors.white;
   TextState state = TextState();
 
   return Container(
-      padding: EdgeInsets.only(top: paddingTop, bottom: paddingBottom),
+      padding: EdgeInsets.only(top: paddingTop ?? defaultPaddingTop, bottom: paddingBottom),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,7 +29,7 @@ Widget textField({
             child: Text(
               label,
               style: TextStyle(
-                color: labelColor,
+                color: labelColor ?? defaultLabelColor,
                 fontSize: 20,
               ),
             ),
@@ -35,13 +39,14 @@ Widget textField({
             onChanged: onChanged,
             validator: validator,
             obscureText: state.obscureText,
+            keyboardType: textInputType,
             decoration: InputDecoration(
               // label: Text(label),
               // labelStyle: TextStyle(
               //   color: labelColor,
               // ),
               filled: true,
-              fillColor: fillColor,
+              fillColor: fillColor ?? defaultFillColor,
               hintText: hintText,
               focusedBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),

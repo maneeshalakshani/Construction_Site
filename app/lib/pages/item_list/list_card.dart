@@ -1,4 +1,6 @@
 import 'package:app/constants.dart';
+import 'package:app/routes/routes.gr.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class ListCard extends StatefulWidget {
@@ -56,7 +58,9 @@ class _ListCardState extends State<ListCard> {
                   color: AppConstants().cardTitleColor,
                   size: 40,
                 ),
-                onPressed: (){},
+                onPressed: (){
+                  context.router.push(OrderRoute(itemID: widget.items[widget.index]['_id']));
+                },
               ),
             ),
           ],

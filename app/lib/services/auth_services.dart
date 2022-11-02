@@ -46,4 +46,29 @@ class AuthenticationServices {
     }
   }
 
+  getUser(String token) async {
+    try {
+      return (await dio.post(
+        '$apiUrl/getData',
+        data: {
+          'token': token,
+        },
+      ));
+    } on DioError catch (e) {
+      print(e);
+    }
+  }
+
+  getUserFromEmail(String email) async {
+    try {
+      return (await dio.post(
+        '$apiUrl/getDataFromEmail',
+        data: {
+          'email': email,
+        },
+      ));
+    } on DioError catch (e) {
+      print(e);
+    }
+  }
 }

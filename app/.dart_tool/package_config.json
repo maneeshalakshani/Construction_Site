@@ -314,6 +314,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "persistent_bottom_nav_bar",
+      "rootUri": "file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/persistent_bottom_nav_bar-5.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///D:/Applications/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-5.1.0",
       "packageUri": "lib/",
@@ -452,7 +458,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-10-29T17:37:46.400167Z",
+  "generated": "2022-11-01T08:16:49.658844Z",
   "generator": "pub",
   "generatorVersion": "2.18.0"
 }
