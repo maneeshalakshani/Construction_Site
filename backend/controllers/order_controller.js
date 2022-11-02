@@ -43,3 +43,48 @@ exports.deleteOrder = async (req, res) => {
         res.status(500).json({'Error': err});
     }
 }
+
+exports.getAllPendingOrders = async (req, res) => {
+    var pendingOrders = [];
+    try{
+        const orders = await Order.find();
+        for(var order of orders){
+            if(order.orderStatus == 'Pending'){
+                pendingOrders.push(order)
+            }
+        }
+        res.status(200).json({'Result': pendingOrders});
+    }catch(err){
+        res.status(500).json({'Error': 'Cannot get All Pending Order details'});
+    }
+}
+
+exports.getAllRejectedOrders = async (req, res) => {
+    var rejectedOrders = [];
+    try{
+        const orders = await Order.find();
+        for(var order of orders){
+            if(order.orderStatus == 'Rejected'){
+                rejectedOrders.push(order)
+            }
+        }
+        res.status(200).json({'Result': rejectedOrders});
+    }catch(err){
+        res.status(500).json({'Error': 'Cannot get All Rejected Order details'});
+    }
+}
+
+exports.getAllAcceptedOrders = async (req, res) => {
+    var AcceptedOrders = [];
+    try{
+        const orders = await Order.find();
+        for(var order of orders){
+            if(order.orderStatus == 'Accepted'){
+                AcceptedOrders.push(order)
+            }
+        }
+        res.status(200).json({'Result': AcceptedOrders});
+    }catch(err){
+        res.status(500).json({'Error': 'Cannot get All Accepted Order details'});
+    }
+}
