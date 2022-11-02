@@ -107,7 +107,7 @@ class _SignUpViewState extends State<SignUpView> {
                                     msg: '${val.data['Result']['name']} is successfully Registered',
                                     toastLength: Toast.LENGTH_SHORT,
                                     gravity: ToastGravity.BOTTOM,
-                                    backgroundColor: Colors.red[900],
+                                    backgroundColor: Colors.green,
                                     textColor: Colors.white,
                                     fontSize: 16.0,
                                   );

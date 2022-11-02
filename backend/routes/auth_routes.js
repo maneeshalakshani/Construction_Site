@@ -8,6 +8,7 @@ const {
     login,
     deleteAllUsers,
     getUserData,
+    getUserDataFromEmail,
 } = require('../controllers/auth_controller')
 
 //api routes
@@ -16,5 +17,6 @@ router.post('/adminRegister', adminRegister);
 router.post('/login', login);
 router.delete('/deleteAllUsers', deleteAllUsers);
 router.post('/getData', getUserData);
+router.post('/getDataFromEmail', getUserDataFromEmail);
 
 module.exports = router;

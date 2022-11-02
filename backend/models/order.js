@@ -5,7 +5,9 @@ var orderSchema = new mongoose.Schema({
     itemID: {type: String},
     quantity: {type: Number},
     totPrice: {type: Number},
-    orderStatus: {type: String}
+    orderStatus: {type: String},
+    deliveryAddress: {type: String},
+    reason: {type: String},
 });
 
 module.exports = new mongoose.model('orders', orderSchema, 'orders');
