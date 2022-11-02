@@ -27,4 +27,20 @@ class OrderServices {
       print(e);
     }
   }
+
+  getAcceptedOrders() async {
+    try {
+      return await dio.get('$apiUrl/getAllAcceptedOrders');
+    } on DioError catch (e) {
+      print(e);
+    }
+  }
+
+  getRejectedOrders() async {
+    try {
+      return await dio.get('$apiUrl/getAllRejecedOrders');
+    } on DioError catch (e) {
+      print(e);
+    }
+  }
 }

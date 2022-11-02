@@ -1,5 +1,6 @@
 import 'package:app/common_data.dart';
 import 'package:app/constants.dart';
+import 'package:app/pages/accepted_orders/accepted_orders_view.dart';
 import 'package:app/pages/item_list/item_list_view.dart';
 import 'package:app/pages/order/order_view.dart';
 import 'package:app/pages/pending_orders/pending_orders_view.dart';
@@ -42,7 +43,7 @@ class _BottomNavViewState extends State<BottomNavView> {
         appCommonData: appCommonData,
       ),
       PendingOrdersView(),
-      PendingOrdersView(),
+      AcceptedOrdersView(),
       PendingOrdersView(),
       SignUpView()
     ];

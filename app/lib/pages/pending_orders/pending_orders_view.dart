@@ -1,6 +1,6 @@
 import 'package:app/common_widgets/null_error.dart';
 import 'package:app/constants.dart';
-import 'package:app/pages/pending_orders/pending_order_card.dart';
+import 'package:app/common_widgets/pending_order_card.dart';
 import 'package:app/services/item_list_services.dart';
 import 'package:app/services/order_services.dart';
 import 'package:flutter/material.dart';

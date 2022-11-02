@@ -3,10 +3,12 @@ import 'package:app/services/item_list_services.dart';
 import 'package:flutter/material.dart';
 
 class PendingOrderCard extends StatefulWidget {
-  PendingOrderCard({Key? key, required this.orders, required this.index})
+  PendingOrderCard(
+      {Key? key, required this.orders, required this.index, this.titleColor})
       : super(key: key);
   var orders;
   int index;
+  Color? titleColor;
 
   @override
   _PendingOrderCardState createState() => _PendingOrderCardState();
@@ -52,7 +54,7 @@ class _PendingOrderCardState extends State<PendingOrderCard> {
                 style: TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
-                    color: AppConstants().cardTitleColor),
+                    color: widget.titleColor ?? AppConstants().cardTitleColor),
               ),
               Text(
                 'Order Status : ${widget.orders[widget.index]['orderStatus']}',
