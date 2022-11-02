@@ -6,7 +6,8 @@ import 'package:app/services/item_list_services.dart';
 import 'package:flutter/material.dart';
 
 class ItemListView extends StatefulWidget {
-  const ItemListView({Key? key}) : super(key: key);
+  ItemListView({Key? key, required this.appCommonData}) : super(key: key);
+  var appCommonData;
 
   @override
   _ItemListViewState createState() => _ItemListViewState();
@@ -44,7 +45,11 @@ class _ItemListViewState extends State<ItemListView> {
           body: ListView.builder(
             itemCount: 3,
             itemBuilder: (BuildContext context, int index) {
-              return ListCard(items: items, index: index);
+              return ListCard(
+                items: items,
+                index: index,
+                appCommonData: widget.appCommonData,
+              );
             },
           ),
         ),

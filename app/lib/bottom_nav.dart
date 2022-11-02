@@ -26,11 +26,7 @@ class _BottomNavViewState extends State<BottomNavView> {
   _BottomNavViewState(this.appCommonData);
 
   int selectedIndex = 0;
-  List<Widget> bodyWidgets = [
-    ItemListView(),
-    LoginView(),
-    SignUpView()
-  ];
+  late List<Widget> bodyWidgets;
 
   // List<Nav> pages = [
   //   Nav(key: 0, pages: [ItemListView(), OrderView()]),
@@ -40,6 +36,14 @@ class _BottomNavViewState extends State<BottomNavView> {
 
   @override
   Widget build(BuildContext context) {
+    bodyWidgets = [
+      ItemListView(
+        appCommonData: appCommonData,
+      ),
+      LoginView(),
+      SignUpView()
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -56,14 +60,16 @@ class _BottomNavViewState extends State<BottomNavView> {
         iconSize: 35,
         elevation: 5,
         currentIndex: selectedIndex,
-        onTap: (index){
+        onTap: (index) {
           setState(() {
             selectedIndex = index;
           });
         },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home,),
+            icon: Icon(
+              Icons.home,
+            ),
             label: 'home',
           ),
           BottomNavigationBarItem(

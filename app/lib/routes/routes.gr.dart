@@ -34,9 +34,13 @@ class AppRouter extends _i6.RootStackRouter {
       );
     },
     ItemListRoute.name: (routeData) {
+      final args = routeData.argsAs<ItemListRouteArgs>();
       return _i6.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i2.ItemListView(),
+        child: _i2.ItemListView(
+          key: args.key,
+          appCommonData: args.appCommonData,
+        ),
       );
     },
     SignUpRoute.name: (routeData) {
@@ -62,6 +66,7 @@ class AppRouter extends _i6.RootStackRouter {
         child: _i5.OrderView(
           key: args.key,
           itemID: args.itemID,
+          appCommonData: args.appCommonData,
         ),
       );
     },
@@ -106,14 +111,36 @@ class LoginRoute extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.ItemListView]
-class ItemListRoute extends _i6.PageRouteInfo<void> {
-  const ItemListRoute()
-      : super(
+class ItemListRoute extends _i6.PageRouteInfo<ItemListRouteArgs> {
+  ItemListRoute({
+    _i7.Key? key,
+    required dynamic appCommonData,
+  }) : super(
           ItemListRoute.name,
           path: '/item_list',
+          args: ItemListRouteArgs(
+            key: key,
+            appCommonData: appCommonData,
+          ),
         );
 
   static const String name = 'ItemListRoute';
+}
+
+class ItemListRouteArgs {
+  const ItemListRouteArgs({
+    this.key,
+    required this.appCommonData,
+  });
+
+  final _i7.Key? key;
+
+  final dynamic appCommonData;
+
+  @override
+  String toString() {
+    return 'ItemListRouteArgs{key: $key, appCommonData: $appCommonData}';
+  }
 }
 
 /// generated route for
@@ -168,12 +195,14 @@ class OrderRoute extends _i6.PageRouteInfo<OrderRouteArgs> {
   OrderRoute({
     _i7.Key? key,
     required String itemID,
+    required _i8.AppCommonData appCommonData,
   }) : super(
           OrderRoute.name,
           path: '/order',
           args: OrderRouteArgs(
             key: key,
             itemID: itemID,
+            appCommonData: appCommonData,
           ),
         );
 
@@ -184,14 +213,17 @@ class OrderRouteArgs {
   const OrderRouteArgs({
     this.key,
     required this.itemID,
+    required this.appCommonData,
   });
 
   final _i7.Key? key;
 
   final String itemID;
 
+  final _i8.AppCommonData appCommonData;
+
   @override
   String toString() {
-    return 'OrderRouteArgs{key: $key, itemID: $itemID}';
+    return 'OrderRouteArgs{key: $key, itemID: $itemID, appCommonData: $appCommonData}';
   }
 }

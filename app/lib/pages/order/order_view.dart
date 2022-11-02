@@ -1,3 +1,4 @@
+import 'package:app/common_data.dart';
 import 'package:app/common_widgets/buttons/normal_button.dart';
 import 'package:app/common_widgets/buttons/round_button.dart';
 import 'package:app/common_widgets/null_error.dart';
@@ -13,8 +14,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class OrderView extends StatefulWidget {
-  OrderView({Key? key, required this.itemID}) : super(key: key);
+  OrderView({Key? key, required this.itemID, required this.appCommonData})
+      : super(key: key);
   String itemID;
+  AppCommonData appCommonData;
 
   @override
   _OrderViewState createState() => _OrderViewState();
@@ -24,7 +27,6 @@ class _OrderViewState extends State<OrderView> {
   var item;
   void getItem() {
     ItemListServices().getItem(widget.itemID).then((val) async {
-      print(val.data['Result']);
       setState(() {
         item = val.data['Result'];
       });
@@ -123,7 +125,8 @@ class _OrderViewState extends State<OrderView> {
                                       total, address)
                                   .then((order) {
                                 if (order.data['message'] == 'Order Added') {
-                                  context.router.push(ItemListRoute());
+                                  context.router.push(BottomNavRoute(
+                                      appCommonData: widget.appCommonData));
                                 }
                               });
                             }

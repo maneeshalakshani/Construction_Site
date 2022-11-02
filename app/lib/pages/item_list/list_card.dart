@@ -1,12 +1,19 @@
+import 'package:app/common_data.dart';
 import 'package:app/constants.dart';
 import 'package:app/routes/routes.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class ListCard extends StatefulWidget {
-  ListCard({Key? key, required this.items, required this.index}) : super(key: key);
+  ListCard(
+      {Key? key,
+      required this.items,
+      required this.index,
+      required this.appCommonData})
+      : super(key: key);
   var items;
   int index;
+  AppCommonData appCommonData;
 
   @override
   _ListCardState createState() => _ListCardState();
@@ -29,25 +36,20 @@ class _ListCardState extends State<ListCard> {
                 Text(
                   widget.items[widget.index]['name'],
                   style: TextStyle(
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.bold,
-                    color: AppConstants().cardTitleColor
-                  ),
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold,
+                      color: AppConstants().cardTitleColor),
                 ),
                 Text(
                   'Unit Price : ${widget.items[widget.index]['unitPrice']}',
                   style: TextStyle(
-                      fontSize: 20.0,
-                      color: AppConstants().cardDataColor
-                  ),
+                      fontSize: 20.0, color: AppConstants().cardDataColor),
                 ),
                 Text(
                   'Unit Type : ${widget.items[widget.index]['unitType']}',
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      fontSize: 20.0,
-                      color: AppConstants().cardDataColor
-                  ),
+                      fontSize: 20.0, color: AppConstants().cardDataColor),
                 ),
               ],
             ),
@@ -58,8 +60,10 @@ class _ListCardState extends State<ListCard> {
                   color: AppConstants().cardTitleColor,
                   size: 40,
                 ),
-                onPressed: (){
-                  context.router.push(OrderRoute(itemID: widget.items[widget.index]['_id']));
+                onPressed: () {
+                  context.router.push(OrderRoute(
+                      itemID: widget.items[widget.index]['_id'],
+                      appCommonData: widget.appCommonData));
                 },
               ),
             ),
