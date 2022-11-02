@@ -14,7 +14,7 @@ exports.add = async (req, res) => {
 
 exports.update = async (req, res) => {
     const {id} = req.params;
-    const {orderStatus} = req.body;
+    const {orderStatus, reason} = req.body;
     try{        
         const orderToUpdate = await Order.findById(id);
         var orderObj = {
@@ -23,7 +23,8 @@ exports.update = async (req, res) => {
             "quantity": orderToUpdate.quantity,
             "totPrice": orderToUpdate.totPrice,
             "orderStatus": orderStatus,
-            "deliveryAddress": orderToUpdate.deliveryAddress
+            "deliveryAddress": orderToUpdate.deliveryAddress,
+            "reason": reason
         }
 
         await Order.findByIdAndUpdate(id, orderObj);
