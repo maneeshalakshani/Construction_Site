@@ -9,26 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38aac047-80c0-4134-a2fa-748d8e43934b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/common_widgets/appBar.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/inquire/inquire_view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/services/inquiry_services.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bottom_nav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bottom_nav.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common_widgets/pending_order_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common_widgets/pending_order_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common_widgets/text_field/text_field_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common_widgets/text_field/text_field_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/item_list/item_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/item_list/item_list_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login/login_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/order/order_description.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/order/order_description.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/order/order_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/order/order_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/order/title.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common_widgets/title.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/pending_orders/pending_orders_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/pending_orders/pending_orders_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/register/register_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/register/register_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/rejected_orders.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/rejected_orders/rejected_orders.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/routes/routes.gr.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/routes.gr.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="38aac047-80c0-4134-a2fa-748d8e43934b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667136264697</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: Inquiry Add Completed">
+      <created>1668183503551</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668183503551</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -125,6 +113,7 @@
     <MESSAGE value="feat: Mobile App's Login/ SignUp UI" />
     <MESSAGE value="feat: Mobile App's Login/ SignUp login implemented" />
     <MESSAGE value="feat: Mobile App's Item List implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Mobile App's Item List implemented" />
+    <MESSAGE value="feat: Inquiry Add Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Inquiry Add Completed" />
   </component>
 </project>
