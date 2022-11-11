@@ -73,7 +73,8 @@ class _SignUpViewState extends State<SignUpView> {
                             name = val;
                           },
                           initialValue: '',
-                          validator: (String? val){},
+                          validator: true,
+                          errMsg: 'Please Enter Name',
                           hintText: 'Enter name',
                           context: context
                       ),
@@ -82,7 +83,8 @@ class _SignUpViewState extends State<SignUpView> {
                           onChanged: (String val){
                             password = val;
                           },
-                          validator: (String? val){},
+                          validator: true,
+                          errMsg: 'Please Enter Password',
                           label: 'Password',
                           hintText: 'Enter password',
                           context: context
@@ -92,7 +94,8 @@ class _SignUpViewState extends State<SignUpView> {
                           onChanged: (String val){
                             email = val;
                           },
-                          validator: (String? val){},
+                          validator: true,
+                          errMsg: 'Please Enter Email',
                           label: 'Email',
                           hintText: 'Enter email',
                           context: context

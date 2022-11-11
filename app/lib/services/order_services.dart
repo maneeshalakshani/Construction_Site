@@ -20,6 +20,14 @@ class OrderServices {
     }
   }
 
+  deletePendingOrder(String orderID) async {
+    try{
+      return await dio.delete('$apiUrl/delete/${orderID}');
+    }on DioError catch (e){
+      print(e);
+    }
+  }
+
   getPendingOrders() async {
     try {
       return await dio.get('$apiUrl/getAllPendingOrders');

@@ -11,32 +11,33 @@
 // ignore_for_file: type=lint
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i7;
-import 'package:flutter/material.dart' as _i8;
+import 'package:auto_route/auto_route.dart' as _i8;
+import 'package:flutter/material.dart' as _i9;
 
 import '../bottom_nav.dart' as _i4;
-import '../common_data.dart' as _i9;
+import '../common_data.dart' as _i10;
+import '../pages/inquire/inquire_view.dart' as _i7;
 import '../pages/item_list/item_list_view.dart' as _i2;
 import '../pages/login/login_view.dart' as _i1;
 import '../pages/order/order_view.dart' as _i5;
 import '../pages/pending_orders/pending_orders_view.dart' as _i6;
 import '../pages/register/register_view.dart' as _i3;
 
-class AppRouter extends _i7.RootStackRouter {
-  AppRouter([_i8.GlobalKey<_i8.NavigatorState>? navigatorKey])
+class AppRouter extends _i8.RootStackRouter {
+  AppRouter([_i9.GlobalKey<_i9.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
-  final Map<String, _i7.PageFactory> pagesMap = {
+  final Map<String, _i8.PageFactory> pagesMap = {
     LoginRoute.name: (routeData) {
-      return _i7.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i1.LoginView(),
       );
     },
     ItemListRoute.name: (routeData) {
       final args = routeData.argsAs<ItemListRouteArgs>();
-      return _i7.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i2.ItemListView(
           key: args.key,
@@ -45,14 +46,14 @@ class AppRouter extends _i7.RootStackRouter {
       );
     },
     SignUpRoute.name: (routeData) {
-      return _i7.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i3.SignUpView(),
       );
     },
     BottomNavRoute.name: (routeData) {
       final args = routeData.argsAs<BottomNavRouteArgs>();
-      return _i7.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i4.BottomNavView(
           key: args.key,
@@ -62,7 +63,7 @@ class AppRouter extends _i7.RootStackRouter {
     },
     OrderRoute.name: (routeData) {
       final args = routeData.argsAs<OrderRouteArgs>();
-      return _i7.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i5.OrderView(
           key: args.key,
@@ -72,45 +73,60 @@ class AppRouter extends _i7.RootStackRouter {
       );
     },
     PendingOrdersRoute.name: (routeData) {
-      return _i7.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i6.PendingOrdersView(),
+      );
+    },
+    InquireRoute.name: (routeData) {
+      final args = routeData.argsAs<InquireRouteArgs>();
+      return _i8.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: _i7.InquireView(
+          key: args.key,
+          appCommonData: args.appCommonData,
+          orderID: args.orderID,
+        ),
       );
     },
   };
 
   @override
-  List<_i7.RouteConfig> get routes => [
-        _i7.RouteConfig(
+  List<_i8.RouteConfig> get routes => [
+        _i8.RouteConfig(
           LoginRoute.name,
           path: '/',
         ),
-        _i7.RouteConfig(
+        _i8.RouteConfig(
           ItemListRoute.name,
           path: '/item_list',
         ),
-        _i7.RouteConfig(
+        _i8.RouteConfig(
           SignUpRoute.name,
           path: '/signUp',
         ),
-        _i7.RouteConfig(
+        _i8.RouteConfig(
           BottomNavRoute.name,
           path: '/nav',
         ),
-        _i7.RouteConfig(
+        _i8.RouteConfig(
           OrderRoute.name,
           path: '/order',
         ),
-        _i7.RouteConfig(
+        _i8.RouteConfig(
           PendingOrdersRoute.name,
           path: '/pending_orders',
+        ),
+        _i8.RouteConfig(
+          InquireRoute.name,
+          path: '/inquire_rejected_orders',
         ),
       ];
 }
 
 /// generated route for
 /// [_i1.LoginView]
-class LoginRoute extends _i7.PageRouteInfo<void> {
+class LoginRoute extends _i8.PageRouteInfo<void> {
   const LoginRoute()
       : super(
           LoginRoute.name,
@@ -122,9 +138,9 @@ class LoginRoute extends _i7.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.ItemListView]
-class ItemListRoute extends _i7.PageRouteInfo<ItemListRouteArgs> {
+class ItemListRoute extends _i8.PageRouteInfo<ItemListRouteArgs> {
   ItemListRoute({
-    _i8.Key? key,
+    _i9.Key? key,
     required dynamic appCommonData,
   }) : super(
           ItemListRoute.name,
@@ -144,7 +160,7 @@ class ItemListRouteArgs {
     required this.appCommonData,
   });
 
-  final _i8.Key? key;
+  final _i9.Key? key;
 
   final dynamic appCommonData;
 
@@ -156,7 +172,7 @@ class ItemListRouteArgs {
 
 /// generated route for
 /// [_i3.SignUpView]
-class SignUpRoute extends _i7.PageRouteInfo<void> {
+class SignUpRoute extends _i8.PageRouteInfo<void> {
   const SignUpRoute()
       : super(
           SignUpRoute.name,
@@ -168,10 +184,10 @@ class SignUpRoute extends _i7.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.BottomNavView]
-class BottomNavRoute extends _i7.PageRouteInfo<BottomNavRouteArgs> {
+class BottomNavRoute extends _i8.PageRouteInfo<BottomNavRouteArgs> {
   BottomNavRoute({
-    _i8.Key? key,
-    required _i9.AppCommonData appCommonData,
+    _i9.Key? key,
+    required _i10.AppCommonData appCommonData,
   }) : super(
           BottomNavRoute.name,
           path: '/nav',
@@ -190,9 +206,9 @@ class BottomNavRouteArgs {
     required this.appCommonData,
   });
 
-  final _i8.Key? key;
+  final _i9.Key? key;
 
-  final _i9.AppCommonData appCommonData;
+  final _i10.AppCommonData appCommonData;
 
   @override
   String toString() {
@@ -202,11 +218,11 @@ class BottomNavRouteArgs {
 
 /// generated route for
 /// [_i5.OrderView]
-class OrderRoute extends _i7.PageRouteInfo<OrderRouteArgs> {
+class OrderRoute extends _i8.PageRouteInfo<OrderRouteArgs> {
   OrderRoute({
-    _i8.Key? key,
+    _i9.Key? key,
     required String itemID,
-    required _i9.AppCommonData appCommonData,
+    required _i10.AppCommonData appCommonData,
   }) : super(
           OrderRoute.name,
           path: '/order',
@@ -227,11 +243,11 @@ class OrderRouteArgs {
     required this.appCommonData,
   });
 
-  final _i8.Key? key;
+  final _i9.Key? key;
 
   final String itemID;
 
-  final _i9.AppCommonData appCommonData;
+  final _i10.AppCommonData appCommonData;
 
   @override
   String toString() {
@@ -241,7 +257,7 @@ class OrderRouteArgs {
 
 /// generated route for
 /// [_i6.PendingOrdersView]
-class PendingOrdersRoute extends _i7.PageRouteInfo<void> {
+class PendingOrdersRoute extends _i8.PageRouteInfo<void> {
   const PendingOrdersRoute()
       : super(
           PendingOrdersRoute.name,
@@ -249,4 +265,43 @@ class PendingOrdersRoute extends _i7.PageRouteInfo<void> {
         );
 
   static const String name = 'PendingOrdersRoute';
+}
+
+/// generated route for
+/// [_i7.InquireView]
+class InquireRoute extends _i8.PageRouteInfo<InquireRouteArgs> {
+  InquireRoute({
+    _i9.Key? key,
+    required _i10.AppCommonData appCommonData,
+    required String orderID,
+  }) : super(
+          InquireRoute.name,
+          path: '/inquire_rejected_orders',
+          args: InquireRouteArgs(
+            key: key,
+            appCommonData: appCommonData,
+            orderID: orderID,
+          ),
+        );
+
+  static const String name = 'InquireRoute';
+}
+
+class InquireRouteArgs {
+  const InquireRouteArgs({
+    this.key,
+    required this.appCommonData,
+    required this.orderID,
+  });
+
+  final _i9.Key? key;
+
+  final _i10.AppCommonData appCommonData;
+
+  final String orderID;
+
+  @override
+  String toString() {
+    return 'InquireRouteArgs{key: $key, appCommonData: $appCommonData, orderID: $orderID}';
+  }
 }

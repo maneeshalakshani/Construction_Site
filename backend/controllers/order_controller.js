@@ -2,8 +2,13 @@ const Order = require('../models/order')
 
 exports.add = async (req, res) => {
     const {quantity, userID, itemID, totPrice, deliveryAddress} = req.body;
-    const orderStatus = 'Pending';
+    var orderStatus;
     try{
+        if(totPrice > 100000){
+            orderStatus = 'Pending';
+        }else {
+            orderStatus = 'Accepted';
+        }
         const order = new Order({userID, itemID, quantity, totPrice, orderStatus, deliveryAddress})
         const returnOrder = await order.save()
         res.status(200).json({message: 'Order Added', Result: returnOrder})
@@ -39,7 +44,7 @@ exports.deleteOrder = async (req, res) => {
     const {id} = req.params;
     try{
         await Order.deleteOne({_id: id});
-        res.status(200).json({'message': 'Order deleted Sucessfuly'});
+        res.status(200).json({message: 'Order deleted Sucessfuly'});
     }catch(err){
         res.status(500).json({'Error': err});
     }
