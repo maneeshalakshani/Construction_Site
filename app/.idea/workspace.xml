@@ -9,7 +9,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38aac047-80c0-4134-a2fa-748d8e43934b" name="Default Changelist" comment="" />
+    <list default="true" id="38aac047-80c0-4134-a2fa-748d8e43934b" name="Default Changelist" comment="feat: Inquiry Add Completed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common_widgets/pending_order_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common_widgets/pending_order_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/pending_orders/pending_orders_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/pending_orders/pending_orders_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/order_services.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/order_services.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/controllers/order_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/controllers/order_controller.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

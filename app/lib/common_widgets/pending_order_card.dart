@@ -2,6 +2,7 @@ import 'package:app/common_data.dart';
 import 'package:app/constants.dart';
 import 'package:app/routes/routes.gr.dart';
 import 'package:app/services/item_list_services.dart';
+import 'package:app/services/order_services.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
@@ -13,12 +14,16 @@ class PendingOrderCard extends StatefulWidget {
     this.titleColor,
     this.needInquire,
     this.appCommonData,
+    this.isPending,
+    this.delete
   }) : super(key: key);
   var orders;
   int index;
   Color? titleColor;
   bool? needInquire;
   AppCommonData? appCommonData;
+  bool? isPending;
+  var delete;
 
   @override
   _PendingOrderCardState createState() => _PendingOrderCardState();
@@ -39,6 +44,16 @@ class _PendingOrderCardState extends State<PendingOrderCard> {
       }
     });
   }
+
+  // deleteOrder(){
+  //   OrderServices().deletePendingOrder(widget.orders[widget.index]['_id']).then((val){
+  //     if(val.data['message'] == 'Order deleted Sucessfuly'){
+  //       setState(() {
+  //         getItem();
+  //       });
+  //     }
+  //   });
+  // }
 
   @override
   void initState() {
@@ -110,6 +125,22 @@ class _PendingOrderCardState extends State<PendingOrderCard> {
                   ),
                 ),
               ),
+              Container(
+                child: (widget.isPending != true) ? null : ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.red
+                  ),
+                  child: const Text(
+                    'Delete',
+                    style: TextStyle(
+                      letterSpacing: 1.0,
+                    ),
+                  ),
+                  onPressed: (){
+                    widget.delete(widget.orders[widget.index]['_id']);
+                  },
+                ),
+              )
             ],
           ),
         ),
