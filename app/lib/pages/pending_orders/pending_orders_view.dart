@@ -33,8 +33,6 @@ class _PendingOrdersViewState extends State<PendingOrdersView> {
 
   @override
   Widget build(BuildContext context) {
-    //getPendingOrders();
-
     if (ordersLength == 0 || ordersLength == null) {
       return NullError();
     } else {
@@ -44,23 +42,6 @@ class _PendingOrdersViewState extends State<PendingOrdersView> {
           body: ListView.builder(
             itemCount: ordersLength,
             itemBuilder: (BuildContext context, int index) {
-              // return Container(
-              //   // color: Colors.pink,
-              //   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-              //   height: 20,
-              //   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-              //   // child: Text(
-              //   //   orders[index]['_id'],
-              //   //   style: TextStyle(color: Colors.white),
-              //   // ),
-              //   child: Text(
-              //     'awefwefw',
-              //     style: TextStyle(color: Colors.black),
-              //   ),
-              // );
-
-              //return Text(orders[index]['_id']);
-
               return PendingOrderCard(orders: orders, index: index);
             },
           ),

@@ -1,14 +1,24 @@
+import 'package:app/common_data.dart';
 import 'package:app/constants.dart';
+import 'package:app/routes/routes.gr.dart';
 import 'package:app/services/item_list_services.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class PendingOrderCard extends StatefulWidget {
-  PendingOrderCard(
-      {Key? key, required this.orders, required this.index, this.titleColor})
-      : super(key: key);
+  PendingOrderCard({
+    Key? key,
+    required this.orders,
+    required this.index,
+    this.titleColor,
+    this.needInquire,
+    this.appCommonData,
+  }) : super(key: key);
   var orders;
   int index;
   Color? titleColor;
+  bool? needInquire;
+  AppCommonData? appCommonData;
 
   @override
   _PendingOrderCardState createState() => _PendingOrderCardState();
@@ -79,6 +89,26 @@ class _PendingOrderCardState extends State<PendingOrderCard> {
                 textAlign: TextAlign.start,
                 style: TextStyle(
                     fontSize: 18.0, color: AppConstants().cardDataColor),
+              ),
+              Container(
+                child: (widget.needInquire != true) ? null :
+                ElevatedButton(
+                  onPressed: (){
+                    context.router.push(InquireRoute(
+                      appCommonData: widget.appCommonData!,
+                      orderID: widget.orders[widget.index]['_id']
+                    ));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: AppConstants().cardTitleColor
+                  ),
+                  child: const Text(
+                    'Inquire',
+                    style: TextStyle(
+                      letterSpacing: 1.0,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

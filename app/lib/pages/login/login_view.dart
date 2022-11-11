@@ -74,7 +74,8 @@ class _LoginViewState extends State<LoginView> {
                             email = val;
                           },
                           initialValue: '',
-                          validator: (String? val) {},
+                          validator: true,
+                          errMsg: 'Please Enter Email',
                           hintText: 'Enter email',
                           context: context),
                       textField(
@@ -82,7 +83,8 @@ class _LoginViewState extends State<LoginView> {
                           onChanged: (String val) {
                             password = val;
                           },
-                          validator: (String? val) {},
+                          validator: true,
+                          errMsg: 'Please Enter Password',
                           label: 'Password',
                           hintText: 'Enter password',
                           context: context),
