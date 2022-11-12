@@ -37,9 +37,9 @@ export const  SidebarData =[
         cName:'nav-text'
     },
     {
-        title:"Delivery",
+        title:"Order Status",
         icon:<LocalShippingIcon />,
-        path:"/delivery",
+        path:"/changeOrderStatus",
         cName:'nav-text'
     },
     
