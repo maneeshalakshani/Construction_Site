@@ -21,7 +21,7 @@ export const  SidebarData =[
     {
         title:"Orders",
         icon:<BookmarkBorderIcon/>,
-        path:"/orderManagement",
+        path:"/pendingOrders",
         cName:'nav-text'
     },
     {

@@ -12,8 +12,6 @@ function Home() {
   developers to public agencies and regional communities. As the largest construction company in Sri Lanka, </p>
   <p>its work has enriched all sectors of the economy, from healthcare and hospitality to transport and water supply.</p>
 
- 
-  
 </div>
     </div>
   );

@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom';
 function Addproduct() {
  
     return(
-        <div>
+        <div className='container row'>
         <br></br>
-        <div className='container'>
+        <div>
         <Link to='/viewproduct'>
             <button className='btn btn-secondary'>
                 View All Suppliers
@@ -15,7 +15,7 @@ function Addproduct() {
         </Link>
             <button></button>
             <div >
-            <br></br><br></br><br></br>
+            <br></br>
         <div>
             <form>
             <br></br>
@@ -26,7 +26,7 @@ function Addproduct() {
                     <label for="fname">Product ID</label>
                 </div>
                 <div class="row">
-                    <input type="text" id="fname" name="firstname" placeholder="Product id.."></input>
+                    <input type="text" id="fname" name="firstname" size="23" placeholder="Product id.."></input>
                 </div>
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -37,7 +37,7 @@ function Addproduct() {
                     <label for="fname">Product Name</label>
                 </div>
                 <div class="row">
-                    <input type="text" id="fname" name="productname" placeholder="Product name.."></input>
+                    <input type="text" id="fname" name="productname" size="23" placeholder="Product name.."></input>
                 </div>
             </div>
            </ul>
@@ -45,10 +45,10 @@ function Addproduct() {
            <ul className='addproductul'>
            <div class="row">
                 <div class="row">
-                    <label for="fname">Supplier Name</label>
+                    <label for="fname">Supplier       </label>
                 </div>
                 <div class="row">
-                    <input type="text" id="fname" name="suppliername" placeholder="Supplier name.."></input>
+                    <input type="text" id="fname" name="suppliername" size="25" placeholder="Supplier name.."></input>
                 </div>
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -56,10 +56,10 @@ function Addproduct() {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div class="row">
                 <div class="row">
-                    <label for="fname">Price Range</label>
+                    <label for="fname">Price Range   </label>
                 </div>
                 <div class="row">
-                    <input type="text" id="fname" name="pricerange" placeholder="Price range.."></input>
+                    <input type="text" id="fname" name="pricerange" size="25" placeholder="Price range.."></input>
                 </div>
             </div>
            </ul>
@@ -70,7 +70,7 @@ function Addproduct() {
                     <label for="fname">Quantity Type</label>
                 </div>
                 <div class="row">
-                    <input type="text" id="fname" name="quantitytype" placeholder="Quantity Type.."></input>
+                    <input type="text" id="fname" name="quantitytype" size="20" placeholder="Quantity Type.."></input>
                 </div>
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -78,10 +78,10 @@ function Addproduct() {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div class="row">
                 <div class="row">
-                    <label for="fname">Quantity</label>
+                    <label for="fname">Quantity     </label>
                 </div>
                 <div class="row">
-                    <input type="text" id="fname" name="quantity" placeholder="Quantity"></input>
+                    <input type="text" id="fname" name="quantity" size="26" placeholder="Quantity      "></input>
                 </div>
             </div>
            </ul>
@@ -91,7 +91,7 @@ function Addproduct() {
                     <label for="fname">Discription</label>
                 </div>
                 <div class="row">
-                    <textarea type="text" id="fname" name="discription" placeholder="discription.."></textarea>
+                    <textarea type="text" id="fname" name="discription" size="20" placeholder="discription.."></textarea>
                 </div>
             </div>
             <br></br> <br></br> <br></br> <br></br>
@@ -99,8 +99,7 @@ function Addproduct() {
                 <ul className='addsupplierul'>
                 <button type="submit" className="addproductbutton">Save Product</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="submit" className="cancelproductbutton">Cancel</button>
                 </ul>
         
