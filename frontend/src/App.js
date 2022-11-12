@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import AddSupplier from './pages/AddSupplier';
 import Addproduct from './pages/Addproduct';
+import ViewProduct from './pages/ViewProducts';
 
 import Navbar from './Components/Navbar';
 
@@ -16,6 +17,7 @@ function App() {
     <Route path='/home' element={<Home/>} />
     <Route path='/addsupplier' element={<AddSupplier/>} />
     <Route path='/addproduct' element={<Addproduct/>} />
+    <Route path='/viewproduct' element={<ViewProduct/>} />
     </Routes>
    </Router>
 
