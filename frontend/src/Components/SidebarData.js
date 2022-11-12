@@ -25,6 +25,12 @@ export const  SidebarData =[
         cName:'nav-text'
     },
     {
+        title:"Order Approving",
+        icon:<PaidIcon />,
+        path:"/transaction",
+        cName:'nav-text'
+    },
+    {
         title:"Products",
         icon:<PrecisionManufacturingIcon/>,
         path:"/addproduct",
@@ -36,13 +42,7 @@ export const  SidebarData =[
         path:"/delivery",
         cName:'nav-text'
     },
-    {
-        title:"Transactions",
-        icon:<PaidIcon />,
-        path:"/transaction",
-        cName:'nav-text'
-    }
-
+    
   
 ]
    

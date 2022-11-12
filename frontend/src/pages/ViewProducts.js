@@ -23,7 +23,7 @@ function ViewProduct() {
  
     if(item == null){
         <div className='row'>
-            <div className='col container view_all_suppliers_container'>
+            <div className='viewProductTable '>
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
@@ -42,7 +42,7 @@ function ViewProduct() {
     }else{
         return(
             <div className='row'>
-                <div className='col view_all_suppliers_container'>
+                <div className='viewProductTable '>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
