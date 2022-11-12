@@ -3,3 +3,10 @@
     margin-top: 100px;
     margin-left: 450px;
 }
+
+.title{
+    color: rgb(226, 179, 216);
+    font-size: x-large;
+    text-align: center;
+    padding-left: 100px;
+}

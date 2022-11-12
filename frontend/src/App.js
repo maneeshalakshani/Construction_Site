@@ -8,6 +8,7 @@ import Addproduct from './pages/Addproduct';
 
 import Navbar from './Components/Navbar';
 import ViewSuppliers from "./pages/ViewAllSupplier";
+import UpdateSupplier from "./pages/update_supplier";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <Route path='/addsupplier' element={<AddSupplier/>} />
     <Route path='/addproduct' element={<Addproduct/>} />
     <Route path='/viewsuppliers' element={<ViewSuppliers/>} />
+    <Route path='/updateSuppliers/:id' element={<UpdateSupplier/>} />
     </Routes>
    </Router>
 

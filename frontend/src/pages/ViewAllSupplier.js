@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 
 import '../CSS/view_all_suppliers_css.css';
+import { Link } from 'react-router-dom';
 
 function ViewSuppliers() {
 
@@ -74,7 +75,6 @@ function ViewSuppliers() {
                         <tbody>
                             {
                                 supplier.map((su, index) => {
-                                    console.log('Inside map')
                                     return(
                                         <tr key={index}>
                                             <th scope="row">{su.supplierID}</th>
@@ -87,7 +87,9 @@ function ViewSuppliers() {
                                                 <button className='btn btn-danger' onClick={() => deleteSupplier(su._id)}>Delete</button>
                                             </td>
                                             <td>
-                                                <button className='btn btn-success'>Update</button>
+                                                <Link to={`/updateSuppliers/${su._id}`}>
+                                                    <button className='btn btn-success'>Update</button>
+                                                </Link>
                                             </td>
                                         </tr>
                                     )
