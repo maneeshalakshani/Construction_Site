@@ -7,6 +7,7 @@ import AddSupplier from './pages/AddSupplier';
 import Addproduct from './pages/Addproduct';
 
 import Navbar from './Components/Navbar';
+import ViewSuppliers from "./pages/ViewAllSupplier";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <Route path='/home' element={<Home/>} />
     <Route path='/addsupplier' element={<AddSupplier/>} />
     <Route path='/addproduct' element={<Addproduct/>} />
+    <Route path='/viewsuppliers' element={<ViewSuppliers/>} />
     </Routes>
    </Router>
 
