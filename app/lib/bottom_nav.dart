@@ -1,10 +1,11 @@
 import 'package:app/common_data.dart';
+import 'package:app/common_widgets/appBar.dart';
 import 'package:app/constants.dart';
 import 'package:app/pages/accepted_orders/accepted_orders_view.dart';
 import 'package:app/pages/item_list/item_list_view.dart';
 import 'package:app/pages/order/order_view.dart';
 import 'package:app/pages/pending_orders/pending_orders_view.dart';
-import 'package:app/pages/rejected_orders.dart';
+import 'package:app/pages/rejected_orders/rejected_orders.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages/login/login_view.dart';
 import 'package:app/pages/register/register_view.dart';
@@ -39,16 +40,14 @@ class _BottomNavViewState extends State<BottomNavView> {
       ),
       PendingOrdersView(),
       AcceptedOrdersView(),
-      RejectedOrdersView(),
+      RejectedOrdersView(appCommonData: appCommonData,),
       // SignUpView()
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Site Manager',
-        ),
-        backgroundColor: AppConstants().navColor,
+      appBar: AppBarWidget(
+        appCommonData: appCommonData,
+        context: context
       ),
       body: bodyWidgets.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(

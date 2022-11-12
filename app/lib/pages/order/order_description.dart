@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class OrderDescription extends StatelessWidget {
-  const OrderDescription({Key? key}) : super(key: key);
+  OrderDescription({Key? key, this.description}) : super(key: key);
+  String? description;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: Text(
+        description ??
         'You can order this item as per your wish. But before accepting this order, '
             'the staff will review whether this order is a valid order or not. '
             'The order status can be checked within orders page.',

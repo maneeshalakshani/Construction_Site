@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 Widget textField({
   required String initialValue,
   required void Function(String)? onChanged,
-  required String? Function(String?)? validator,
+  required bool validator,
   required String label,
   required String hintText,
   required BuildContext context,
@@ -12,6 +12,8 @@ Widget textField({
   Color? labelColor,
   double? paddingTop,
   TextInputType? textInputType,
+  int? maxLines,
+  String? errMsg
 }){
   double defaultPaddingTop = 10;
   double paddingBottom = 30;
@@ -37,9 +39,17 @@ Widget textField({
           TextFormField(
             initialValue: initialValue,
             onChanged: onChanged,
-            validator: validator,
+            //validator: validator,
+            validator: validator != true ? null : (String? value) {
+              if (value == null || value.isEmpty) {
+                return errMsg;
+              } else {
+                return null;
+              }
+            },
             obscureText: state.obscureText,
             keyboardType: textInputType,
+            maxLines: maxLines ?? 1,
             decoration: InputDecoration(
               // label: Text(label),
               // labelStyle: TextStyle(

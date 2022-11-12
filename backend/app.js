@@ -30,11 +30,15 @@ app.use(cors({origin: true, credentials: true}));
 const authRoutes = require('./routes/auth_routes');
 const itemRoute = require('./routes/item_route');
 const orderRouter = require('./routes/order_routes');
+const inquiryRoutes = require('./routes/inquiry_routes');
+const supplierRoutes = require('./routes/supplier_routes');
 
 //routes
 app.use('/auth', authRoutes);
 app.use('/item', itemRoute);
 app.use('/order', orderRouter);
+app.use('/inquiry', inquiryRoutes);
+app.use('/supplier', supplierRoutes);
 
 
 //listener

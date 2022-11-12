@@ -9,37 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38aac047-80c0-4134-a2fa-748d8e43934b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/common_data.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/common_widgets/null_error.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/nav_bar_2.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/order/order_description.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/order/order_view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/order/title.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bottom_nav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bottom_nav.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common_widgets/text_field/text_field_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common_widgets/text_field/text_field_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/item_list/item_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/item_list/item_list_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/item_list/list_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/item_list/list_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login/login_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/services/auth_services.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/auth_services.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/services/item_list_services.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/item_list_services.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/controllers/auth_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/controllers/auth_controller.js" afterDir="false" />
-    </list>
+    <list default="true" id="38aac047-80c0-4134-a2fa-748d8e43934b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,6 +57,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Study Materials\Project SLIIT\Y3S2\CSSE\Construction_Site\app\lib\common_widgets" />
+      <recent name="D:\Study Materials\Project SLIIT\Y3S2\CSSE\Construction_Site\app\lib\pages\rejected_orders" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -117,7 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667136264697</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: Inquiry Add Completed">
+      <created>1668183503551</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668183503551</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: delete pending order completed">
+      <created>1668186419680</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668186419683</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -130,6 +120,8 @@
     <MESSAGE value="feat: Mobile App's Login/ SignUp UI" />
     <MESSAGE value="feat: Mobile App's Login/ SignUp login implemented" />
     <MESSAGE value="feat: Mobile App's Item List implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Mobile App's Item List implemented" />
+    <MESSAGE value="feat: Inquiry Add Completed" />
+    <MESSAGE value="fix: delete pending order completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: delete pending order completed" />
   </component>
 </project>

@@ -34,8 +34,6 @@ class _ItemListViewState extends State<ItemListView> {
 
   @override
   Widget build(BuildContext context) {
-    getListData();
-
     if (itemLength == 0 || itemLength == null) {
       return NullError();
     } else {

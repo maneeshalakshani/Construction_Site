@@ -1,3 +1,4 @@
+import 'package:app/common_data.dart';
 import 'package:app/common_widgets/null_error.dart';
 import 'package:app/constants.dart';
 import 'package:app/common_widgets/pending_order_card.dart';
@@ -5,7 +6,8 @@ import 'package:app/services/order_services.dart';
 import 'package:flutter/material.dart';
 
 class RejectedOrdersView extends StatefulWidget {
-  const RejectedOrdersView({Key? key}) : super(key: key);
+  RejectedOrdersView({Key? key, required this.appCommonData}) : super(key: key);
+  AppCommonData appCommonData;
 
   @override
   _RejectedOrdersViewState createState() => _RejectedOrdersViewState();
@@ -45,6 +47,8 @@ class _RejectedOrdersViewState extends State<RejectedOrdersView> {
                 orders: orders,
                 index: index,
                 titleColor: Colors.red,
+                needInquire: true,
+                appCommonData: widget.appCommonData,
               );
             },
           ),

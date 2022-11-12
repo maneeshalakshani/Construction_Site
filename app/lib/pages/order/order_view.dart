@@ -1,17 +1,19 @@
 import 'package:app/common_data.dart';
+import 'package:app/common_widgets/appBar.dart';
 import 'package:app/common_widgets/buttons/normal_button.dart';
 import 'package:app/common_widgets/buttons/round_button.dart';
 import 'package:app/common_widgets/null_error.dart';
 import 'package:app/common_widgets/text_field/text_field_widget.dart';
 import 'package:app/constants.dart';
 import 'package:app/pages/order/order_description.dart';
-import 'package:app/pages/order/title.dart';
+import 'package:app/common_widgets/title.dart';
 import 'package:app/routes/routes.gr.dart';
 import 'package:app/services/auth_services.dart';
 import 'package:app/services/item_list_services.dart';
 import 'package:app/services/order_services.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class OrderView extends StatefulWidget {
   OrderView({Key? key, required this.itemID, required this.appCommonData})
@@ -58,11 +60,9 @@ class _OrderViewState extends State<OrderView> {
       return NullError();
     } else {
       return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Order Item',
-          ),
-          backgroundColor: AppConstants().navColor,
+        appBar: AppBarWidget(
+          context: context,
+          appCommonData: widget.appCommonData
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -76,7 +76,8 @@ class _OrderViewState extends State<OrderView> {
                 textField(
                     context: context,
                     initialValue: '',
-                    validator: (val) {},
+                    validator: true,
+                    errMsg: 'Please Enter No of units',
                     onChanged: (val) {
                       quantity = int.parse(val);
                       total = calculateTotal(quantity!, item['unitPrice']);
@@ -89,7 +90,8 @@ class _OrderViewState extends State<OrderView> {
                 textField(
                   context: context,
                   initialValue: '',
-                  validator: (val) {},
+                  validator: true,
+                  errMsg: 'Please Enter Delivery Address',
                   onChanged: (val) {
                     address = val;
                   },
@@ -97,17 +99,17 @@ class _OrderViewState extends State<OrderView> {
                   hintText: 'Enter delivery address',
                   labelColor: Colors.black,
                 ),
-                textField(
-                  context: context,
-                  initialValue: '',
-                  validator: (val) {},
-                  onChanged: (val) {
-                    email = val;
-                  },
-                  label: 'User email',
-                  hintText: 'Enter your email',
-                  labelColor: Colors.black,
-                ),
+                // textField(
+                //   context: context,
+                //   initialValue: '',
+                //   validator: (val) {},
+                //   onChanged: (val) {
+                //     email = val;
+                //   },
+                //   label: 'User email',
+                //   hintText: 'Enter your email',
+                //   labelColor: Colors.black,
+                // ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -115,22 +117,27 @@ class _OrderViewState extends State<OrderView> {
                         width: 550,
                         title: 'Add Order',
                         onPressed: () {
-                          AuthenticationServices()
-                              .getUserFromEmail(email)
-                              .then((user) {
-                            if (user.data['status'] == 'Ok') {
-                              userID = user.data['data']['_id'];
-                              OrderServices()
-                                  .addOrder(quantity!, userID, item['_id'],
-                                      total, address)
-                                  .then((order) {
-                                if (order.data['message'] == 'Order Added') {
-                                  context.router.push(BottomNavRoute(
-                                      appCommonData: widget.appCommonData));
-                                }
-                              });
+                          OrderServices().addOrder(quantity!, widget.appCommonData.userID, item['_id'], total, address).then((order) {
+                            if (order.data['message'] == 'Order Added') {
+                              Fluttertoast.showToast(
+                                msg: 'Order Added',
+                                textColor: Colors.white,
+                                backgroundColor: Colors.green,
+                                //gravity: ToastGravity.BOTTOM
+                              );
+                              context.router.push(BottomNavRoute(appCommonData: widget.appCommonData));
                             }
                           });
+                          // AuthenticationServices().getUserFromEmail(email).then((user) {
+                          //   if (user.data['status'] == 'Ok') {
+                          //     userID = user.data['data']['_id'];
+                          //     OrderServices().addOrder(quantity!, userID, item['_id'], total, address).then((order) {
+                          //       if (order.data['message'] == 'Order Added') {
+                          //         context.router.push(BottomNavRoute(appCommonData: widget.appCommonData));
+                          //       }
+                          //     });
+                          //   }
+                          // });
                         },
                         btnColor: AppConstants().cardTitleColor,
                         textColor: Colors.white),
