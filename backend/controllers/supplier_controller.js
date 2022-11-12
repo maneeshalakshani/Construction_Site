@@ -20,28 +20,46 @@ exports.getAllSuppliers = async (req, res) => {
     }
 }
 
-// exports.update = async (req, res) => {
-//     const {id} = req.params;
-//     const {orderStatus, reason} = req.body;
-//     try{        
-//         const orderToUpdate = await Supplier.findById(id);
-//         var orderObj = {
-//             "userID": orderToUpdate.userID,
-//             "itemID": orderToUpdate.itemID,
-//             "quantity": orderToUpdate.quantity,
-//             "totPrice": orderToUpdate.totPrice,
-//             "orderStatus": orderStatus,
-//             "deliveryAddress": orderToUpdate.deliveryAddress,
-//             "reason": reason
-//         }
+exports.deleteSupplier = async (req, res) => {
+    const {id} = req.params;
+    try{
+        await Supplier.deleteOne({_id: id});
+        res.status(200).json({message: 'Supplier deleted Sucessfuly'});
+    }catch(err){
+        res.status(500).json({'Error': err});
+    }
+}
 
-//         await Order.findByIdAndUpdate(id, orderObj);
-//         res.status(200).json({'message': 'Order Updated Sucessfully'})
+exports.update = async (req, res) => {
+    const {id} = req.params;
+    const {supplierID, businessName, fullName, tele, email, address} = req.body;
+    try{        
+        var supplierObj = {
+            "supplierID": supplierID,
+            "businessName": businessName,
+            "fullName": fullName,
+            "tele": tele,
+            "email": email,
+            "address": address
+        }
 
-//     }catch(err){
-//         res.status(500).json({'Error': 'Cannot update Order'});
-//     }
-// }
+        await Supplier.findByIdAndUpdate(id, supplierObj);
+        res.status(200).json({'message': 'Supplier Updated Sucessfully'})
+
+    }catch(err){
+        res.status(500).json({'Error': 'Cannot update Supplier'});
+    }
+}
+
+exports.getSupplier = async (req, res) => {
+    const {id} = req.params;
+    try{
+        var data = await Supplier.findOne({_id: id})
+        res.send({status: "Ok", supplier: data})
+    }catch(err){
+        res.status(500).json(err);
+    }
+}
 
 // exports.deleteOrder = async (req, res) => {
 //     const {id} = req.params;
