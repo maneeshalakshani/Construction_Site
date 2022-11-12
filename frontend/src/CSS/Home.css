@@ -1,0 +1,11 @@
+.about-section {
+    position: fixed;
+    top:11%;
+    left:16.5%;
+    width: 89%;
+    padding: 40px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+    font-size: 23px;
+  }
