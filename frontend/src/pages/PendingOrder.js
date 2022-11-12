@@ -1,5 +1,5 @@
 import axios from 'axios';
-import '../CSS/Home.css';
+import '../CSS/PendingOrder.css';
 import React from 'react';
 function PendingOrders() {
 
@@ -24,7 +24,7 @@ function PendingOrders() {
  
     if(order == null){
         <div className='row'>
-            <div className='col container view_all_suppliers_container'>
+            <div className='pendingOrderTable'>
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
@@ -46,7 +46,7 @@ function PendingOrders() {
     }else{
         return(
             <div className='row'>
-                <div className='col view_all_suppliers_container'>
+                <div className='pendingOrderTable'>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>

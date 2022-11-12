@@ -1,5 +1,10 @@
-.view_all_suppliers_container{
-    background-color: rgb(222, 204, 239);
+.viewProductTable {
+    background-color: rgb(39, 139, 239);
     margin-top: 100px;
     margin-left: 450px;
+    width: 60%;
+    color: antiquewhite;
+}
+.table{
+   
 }
