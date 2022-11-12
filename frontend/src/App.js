@@ -11,6 +11,7 @@ import PendingOrders from "./pages/PendingOrder";
 import Navbar from './Components/Navbar';
 import ViewSuppliers from "./pages/ViewAllSupplier";
 import UpdateSupplier from "./pages/update_supplier";
+import ChangeOrderStatus from "./pages/change_order_status";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
     <Route path='/viewsuppliers' element={<ViewSuppliers/>} />
     <Route path='/updateSuppliers/:id' element={<UpdateSupplier/>} />
     <Route path='/pendingOrders' element={<PendingOrders/>} />
+    <Route path='/changeOrderStatus' element={<ChangeOrderStatus/>} />
     </Routes>
    </Router>
 
