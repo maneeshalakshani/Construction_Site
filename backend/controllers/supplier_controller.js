@@ -20,6 +20,16 @@ exports.getAllSuppliers = async (req, res) => {
     }
 }
 
+exports.deleteSupplier = async (req, res) => {
+    const {id} = req.params;
+    try{
+        await Supplier.deleteOne({_id: id});
+        res.status(200).json({message: 'Supplier deleted Sucessfuly'});
+    }catch(err){
+        res.status(500).json({'Error': err});
+    }
+}
+
 // exports.update = async (req, res) => {
 //     const {id} = req.params;
 //     const {orderStatus, reason} = req.body;
