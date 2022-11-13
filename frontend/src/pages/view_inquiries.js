@@ -55,7 +55,7 @@ function ViewInquiries() {
     }else{
         return(
             <div className='row'>
-                <div className='col view_all_suppliers_container'>
+                <div className='col view_all_inquiries_container'>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
@@ -83,7 +83,7 @@ function ViewInquiries() {
                         </tbody>
                     </table>
                 </div>
-                <div className='col'></div>
+                {/* <div className='col'></div> */}
             </div>
         )
     }
