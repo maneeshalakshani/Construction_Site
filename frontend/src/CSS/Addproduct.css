@@ -171,3 +171,8 @@
     .cancelproductbutton:hover {
       background-color: #fb0707;
     }
+
+    .description-style{
+      margin-left: 150px;
+      width: 84%;
+    }
