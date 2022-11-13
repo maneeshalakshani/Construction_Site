@@ -32,11 +32,11 @@ function Addproduct() {
         <br></br>
         <div>
         <Link to='/viewproduct'>
-            <button className='btn btn-secondary'>
+            <button className='viewbutton'><span>
                 View All Products
-            </button>
+            </span></button>
         </Link>
-            <button></button>
+            
             <div >
             <br></br>
         <div>
@@ -114,7 +114,7 @@ function Addproduct() {
                     <label for="fname">Description</label>
                 </div>
                 <div class="row">
-                    <textarea type="text" id="fname" name="discription" size="20" placeholder="discription.." onChange={e => {setDescription(e.target.value);}}></textarea>
+                    <textarea type="text" id="fname" name="discription" size="20" placeholder="Description.." onChange={e => {setDescription(e.target.value);}}></textarea>
                 </div>
             </div>
             <br></br> <br></br> <br></br> <br></br>
