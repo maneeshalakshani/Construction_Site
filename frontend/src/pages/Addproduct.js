@@ -109,7 +109,7 @@ function Addproduct() {
             </div>
            </ul>
             <br></br><br></br><br></br><br></br><br></br>
-            <div class="row">
+            <div class="row description-style">
                 <div class="row">
                     <label for="fname">Description</label>
                 </div>
