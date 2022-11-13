@@ -41,9 +41,9 @@ function AddSupplier() {
                         <form>
                             <div>
                                 <Link to='/viewsuppliers'>
-                                    <button className='btn btn-secondary'>
+                                    <button className='viewbutton' ><span>
                                         View All Suppliers
-                                    </button>
+                                        </span></button>
                                 </Link>
                             </div>
                             <br></br><br></br>
@@ -52,7 +52,7 @@ function AddSupplier() {
                                     <label for="fname">Supplier Business Name</label>
                                 </div>
                                 <div class="col-75">
-                                    <input type="text" id="fname" name="firstname" placeholder="Your company.." onChange={e => {setBusinessName(e.target.value);}}></input>
+                                    <input type="text" id="fname" name="firstname" placeholder="Enter Your Company.." onChange={e => {setBusinessName(e.target.value);}}></input>
                                 </div>
                             </div>
                             <br></br>
@@ -61,7 +61,7 @@ function AddSupplier() {
                                     <label for="fname">Supplier ID</label>
                                 </div>
                                 <div class="col-75">
-                                    <input type="text" id="fname" name="firstname" placeholder="Your id.." onChange={e => {setSupplierID(e.target.value);}}></input>
+                                    <input type="text" id="fname" name="firstname" placeholder="Enter Your ID.." onChange={e => {setSupplierID(e.target.value);}}></input>
                                 </div>
                             </div>
                             <br></br>
@@ -70,7 +70,7 @@ function AddSupplier() {
                                     <label for="fname">Conatct Full Name</label>
                                 </div>
                                 <div class="col-75">
-                                    <input type="text" id="fname" name="firstname" placeholder="Your full name.." onChange={e => {setFullName(e.target.value);}}></input>
+                                    <input type="text" id="fname" name="firstname" placeholder="Enter Your Full Name.." onChange={e => {setFullName(e.target.value);}}></input>
                                 </div>
                             </div>
                             <br></br>
@@ -79,7 +79,7 @@ function AddSupplier() {
                                     <label for="fname">Telephone</label>
                                 </div>
                                 <div class="col-75">
-                                    <input type="text" id="fname" name="firstname" placeholder="Your phone number.." onChange={e => {setTele(e.target.value);}}></input>
+                                    <input type="text" id="fname" name="firstname" placeholder="Enter Your Phone Number.." onChange={e => {setTele(e.target.value);}}></input>
                                 </div>
                             </div>
                             <br></br>
@@ -88,7 +88,7 @@ function AddSupplier() {
                                     <label for="fname">Email</label>
                                 </div>
                                 <div class="col-75">
-                                    <input type="text" id="fname" name="firstname" placeholder="Your email.." onChange={e => {setEmail(e.target.value);}}></input>
+                                    <input type="text" id="fname" name="firstname" placeholder="Enter Your email.." onChange={e => {setEmail(e.target.value);}}></input>
                                 </div>
                             </div>
                             <br></br>
@@ -97,13 +97,13 @@ function AddSupplier() {
                                     <label for="fname">Address</label>
                                 </div>
                                 <div class="col-75">
-                                    <input type="text" id="fname" name="firstname" placeholder="Your address.." onChange={e => {setAddress(e.target.value);}}></input>
+                                    <input type="text" id="fname" name="firstname" placeholder="Enter Your Address.." onChange={e => {setAddress(e.target.value);}}></input>
                                 </div>
                             </div>
                             <br></br> <br></br> <br></br> <br></br>
                             <div class="row" id="addsupplierbutton">
                                 <ul className='addsupplierul'>
-                                <button type="submit" className="savebutton" onClick={addSupplier}>Save Supplier</button>
+                                <button type="submit" className="savebutton" onClick={addSupplier}>Add Supplier</button>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
