@@ -58,7 +58,7 @@ function ChangeOrderStatus() {
 
     if(orders == null){
         <div className='row'>
-            <div className='col container view_all_suppliers_container'>
+            <div className='col view_all_pending_orders_status_container'>
                 <table className="table">
                     <thead className="thead-dark">
                         <tr>
@@ -80,7 +80,7 @@ function ChangeOrderStatus() {
     }else{
         return(
             <div className='row'>
-                <div className='col view_all_suppliers_container'>
+                <div className='col view_all_pending_orders_status_container'>
                     <table className="table">
                         <thead className="thead-dark">
                             <tr>
@@ -88,8 +88,8 @@ function ChangeOrderStatus() {
                                 <th>Quantity</th>
                                 <th>Order Total</th>
                                 <th>Reject Reason</th>
-                                <th>Accept</th>
                                 <th>Reject</th>
+                                <th>Accept</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -122,7 +122,7 @@ function ChangeOrderStatus() {
                         </tbody>
                     </table>
                 </div>
-                <div className='col'></div>
+                {/* <div className='col'></div> */}
             </div>
         )
     }
