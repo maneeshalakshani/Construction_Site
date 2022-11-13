@@ -1,7 +1,7 @@
 const Order = require('../models/order')
 
 exports.add = async (req, res) => {
-    const {quantity, userID, itemID, totPrice, deliveryAddress} = req.body;
+    const {quantity, userID, itemID, totPrice, deliveryAddress, supplierName} = req.body;
     var orderStatus;
     try{
         if(totPrice > 100000){
@@ -9,7 +9,7 @@ exports.add = async (req, res) => {
         }else {
             orderStatus = 'Accepted';
         }
-        const order = new Order({userID, itemID, quantity, totPrice, orderStatus, deliveryAddress})
+        const order = new Order({userID, itemID, quantity, totPrice, orderStatus, deliveryAddress, supplierName})
         const returnOrder = await order.save()
         res.status(200).json({message: 'Order Added', Result: returnOrder})
     }catch(err){
