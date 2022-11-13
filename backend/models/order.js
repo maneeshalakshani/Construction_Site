@@ -8,6 +8,7 @@ var orderSchema = new mongoose.Schema({
     orderStatus: {type: String},
     deliveryAddress: {type: String},
     reason: {type: String},
+    supplierName: {type: String}
 });
 
 module.exports = new mongoose.model('orders', orderSchema, 'orders');
