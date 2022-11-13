@@ -98,7 +98,7 @@ function ViewSuppliers() {
                         </tbody>
                     </table>
                 </div>
-                <div className='col'></div>
+                {/* <div className='col'></div> */}
             </div>
         )
     }
