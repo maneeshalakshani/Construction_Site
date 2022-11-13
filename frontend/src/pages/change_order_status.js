@@ -2,14 +2,14 @@ import React from 'react';
 
 import axios from 'axios';
 
-import '../CSS/view_all_suppliers_css.css';
-
 function ChangeOrderStatus() {
 
     const [orders, setOrders] = React.useState(null);
-    const [item, setItems] = React.useState(null);
+    const [item, setItems] = React.useState('');
 
     const [reason, setReason] = React.useState(null);
+
+    var itemNames = []
 
     React.useEffect(() => {
         getPendingOrders();
@@ -18,13 +18,22 @@ function ChangeOrderStatus() {
     function getPendingOrders(){
         axios.get('http://localhost:8002/order/getAllPendingOrders').then((response) => {
             setOrders(response.data.Result);
+            getItem(response.data.Result.length, response.data.Result)
         });
     }  
 
-    function getItem(id){
-        axios.get(`http://localhost:8002/item/get/${id}`).then((res) => {
-            setItems(res.data.Result);
-        });
+    function getItem(orderLength, order){
+        for(var i=0; i<orderLength; i++){
+            console.log(i);
+            axios.get(`http://localhost:8002/item/get/${order[i].itemID}`).then((res) => {
+                setItems(res.data.Result);
+                itemNames.push(res.data.Result.name);
+            });
+        }
+        // axios.get(`http://localhost:8002/item/get/${id}`).then((res) => {
+        //     setItems(res.data.Result);
+        //     itemNames.push(res.data.Result.name);
+        // });
     }
 
   function rejectOrder(id) {
@@ -50,8 +59,8 @@ function ChangeOrderStatus() {
     if(orders == null){
         <div className='row'>
             <div className='col container view_all_suppliers_container'>
-                <table class="table">
-                    <thead class="thead-dark">
+                <table className="table">
+                    <thead className="thead-dark">
                         <tr>
                             <th scope="col">Product ID</th>
                                 <th scope="col">Quantity</th>
@@ -72,8 +81,8 @@ function ChangeOrderStatus() {
         return(
             <div className='row'>
                 <div className='col view_all_suppliers_container'>
-                    <table class="table">
-                        <thead class="thead-dark">
+                    <table className="table">
+                        <thead className="thead-dark">
                             <tr>
                                 <th>Product ID</th>
                                 <th>Quantity</th>
@@ -86,13 +95,20 @@ function ChangeOrderStatus() {
                         <tbody>
                             {
                                 orders.map((pro, index) => {
-                                    getItem(pro._id);
+                                    // console.log(orders.length)
+                                    // if(index < orders.length){
+                                    //     getItem(pro.itemID);
+                                    //     console.log(item)
+                                    // }
+                                    // console.log(itemNames.length)
                                     return(
                                         <tr key={index}>
                                             <td>{pro.itemID}</td>
                                             <td>{pro.quantity}</td>
                                             <td>{pro.totPrice}</td>
-                                            <input type="text" id="fname" name="firstname" placeholder="Your Reason.." onChange={e => {setReason(e.target.value);}}></input>
+                                            <td>
+                                                <input type="text" id="fname" name="firstname" placeholder="Your Reason.." onChange={e => {setReason(e.target.value);}}></input>
+                                            </td>
                                             <td>
                                                 <button className='btn btn-danger' onClick={() => rejectOrder(pro._id)}>Reject</button>
                                             </td>

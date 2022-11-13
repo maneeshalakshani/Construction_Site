@@ -12,6 +12,7 @@ import Navbar from './Components/Navbar';
 import ViewSuppliers from "./pages/ViewAllSupplier";
 import UpdateSupplier from "./pages/update_supplier";
 import ChangeOrderStatus from "./pages/change_order_status";
+import ViewInquiries from "./pages/view_inquiries";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
     <Route path='/updateSuppliers/:id' element={<UpdateSupplier/>} />
     <Route path='/pendingOrders' element={<PendingOrders/>} />
     <Route path='/changeOrderStatus' element={<ChangeOrderStatus/>} />
+    <Route path='/viewInquiries' element={<ViewInquiries/>} />
     </Routes>
    </Router>
 

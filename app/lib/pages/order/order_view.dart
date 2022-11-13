@@ -2,6 +2,7 @@ import 'package:app/common_data.dart';
 import 'package:app/common_widgets/appBar.dart';
 import 'package:app/common_widgets/buttons/normal_button.dart';
 import 'package:app/common_widgets/buttons/round_button.dart';
+import 'package:app/common_widgets/drop_down.dart';
 import 'package:app/common_widgets/null_error.dart';
 import 'package:app/common_widgets/text_field/text_field_widget.dart';
 import 'package:app/constants.dart';
@@ -11,6 +12,7 @@ import 'package:app/routes/routes.gr.dart';
 import 'package:app/services/auth_services.dart';
 import 'package:app/services/item_list_services.dart';
 import 'package:app/services/order_services.dart';
+import 'package:app/services/supplier_services.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -35,6 +37,18 @@ class _OrderViewState extends State<OrderView> {
     });
   }
 
+  getAllSuppliers(){
+    SupplierServices().getSuppliers().then((val){
+      if(val.data['message'] == 'Suppliers fetched'){
+        setState(() {
+          for(var s in val.data['Result']){
+            userList.add(s['businessName']);
+          }
+        });
+      }
+    });
+  }
+
   int calculateTotal(int quantity, int unitPrice) {
     return quantity * unitPrice;
   }
@@ -43,6 +57,7 @@ class _OrderViewState extends State<OrderView> {
   void initState() {
     super.initState();
     getItem();
+    getAllSuppliers();
   }
 
   late int? quantity;
@@ -51,6 +66,9 @@ class _OrderViewState extends State<OrderView> {
   late String email;
   late String userID;
   // late String itemID;
+
+  var userList = ['None'];
+  String? userValue;
 
   @override
   Widget build(BuildContext context) {
@@ -99,17 +117,17 @@ class _OrderViewState extends State<OrderView> {
                   hintText: 'Enter delivery address',
                   labelColor: Colors.black,
                 ),
-                // textField(
-                //   context: context,
-                //   initialValue: '',
-                //   validator: (val) {},
-                //   onChanged: (val) {
-                //     email = val;
-                //   },
-                //   label: 'User email',
-                //   hintText: 'Enter your email',
-                //   labelColor: Colors.black,
-                // ),
+                DropDown(
+                  speciesList: userList,
+                  itemValue: userValue,
+                  label: 'Select Supplier',
+                  labelColor: Colors.black,
+                  onChange: (value){
+                    setState(() {
+                      userValue = value;
+                    });
+                  },
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
