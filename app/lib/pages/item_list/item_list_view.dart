@@ -41,7 +41,7 @@ class _ItemListViewState extends State<ItemListView> {
         child: Scaffold(
           backgroundColor: AppConstants().insideBackgroundColor,
           body: ListView.builder(
-            itemCount: 3,
+            itemCount: itemLength,
             itemBuilder: (BuildContext context, int index) {
               return ListCard(
                 items: items,

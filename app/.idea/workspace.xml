@@ -9,7 +9,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38aac047-80c0-4134-a2fa-748d8e43934b" name="Default Changelist" comment="" />
+    <list default="true" id="38aac047-80c0-4134-a2fa-748d8e43934b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/common_widgets/drop_down.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/services/supplier_services.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/item_list/item_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/item_list/item_list_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/order/order_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/order/order_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/change_order_status.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/change_order_status.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
