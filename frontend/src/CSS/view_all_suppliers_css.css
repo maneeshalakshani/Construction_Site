@@ -1,12 +1,13 @@
 .view_all_suppliers_container{
-    background-color: rgb(8, 201, 195);
+    background-color: rgb(182, 179, 177);
     margin-top: 100px;
-    margin-left: 450px;
-    width: 100%;
+    margin-left: 350px;
+    margin-right: 100px;
+    width: 50%;
 }
 
 .view_all_inquiries_container{
-    background-color: rgb(249, 245, 249);
+    background-color: rgb(182, 179, 177);
     margin-top: 100px;
     margin-left: 350px;
     margin-right: 100px;
@@ -15,7 +16,7 @@
 }
 
 .view_all_pending_orders_status_container{
-    background-color: rgb(249, 245, 249);
+    background-color: rgb(182, 179, 177);
     margin-top: 100px;
     margin-left: 350px;
     margin-right: 100px;
