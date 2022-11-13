@@ -25,9 +25,9 @@ export const  SidebarData =[
         cName:'nav-text'
     },
     {
-        title:"Order Approving",
+        title:"Inquiries",
         icon:<PaidIcon />,
-        path:"/transaction",
+        path:"/viewInquiries",
         cName:'nav-text'
     },
     {
